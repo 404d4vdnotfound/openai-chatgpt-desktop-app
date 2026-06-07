@@ -86,3 +86,27 @@ Each run:
 5. Report changed files, validation, diff summary, rollback command, and risks.
 <!-- D4VD-PUSHED-GLOBAL-CODEX-END -->
 
+<!-- D4VD-CODEX-V3-REPO-START -->
+## D4VD Codex v3 repo rules
+
+This repo is wired into David's global Codex v3 control plane.
+
+Default:
+- `cx "task"` is YOLO/default automation.
+- `cxf "task"` is fast YOLO with lower token/time budget.
+- `cx auto "task"`, `cx net "task"`, and `cx yolo "task"` are YOLO-level automation.
+- `cx plan "task"` is read-only planning.
+- `cx semi "task"` is the safer escape hatch.
+- `cx doctor` validates the repo.
+- `cx index` refreshes `.ai/repo-index.md`.
+
+Each run:
+1. Check `git status --short --branch`.
+2. Read this `AGENTS.md`.
+3. Read `.ai/repo-index.md` when present.
+4. Use targeted search/reads. Do not dump the whole repo.
+5. Do not read `.ai/runs`, `.ai/reports`, `node_modules`, `.venv`, `.pnpm-store`, `dist`, `build`, caches, or generated output unless needed.
+6. Run `.ai/doctor.sh` after changes.
+7. Report changed files, validation, diff summary, rollback command, and risks.
+<!-- D4VD-CODEX-V3-REPO-END -->
+

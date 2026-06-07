@@ -1,30 +1,35 @@
 # Repo Codex README
 
-This repo uses David's global Codex control plane.
+This repo uses David's global Codex v3 control plane.
 
 ## Daily commands
 
-    cx "task"             # YOLO default
-    cx yolo "task"        # YOLO explicit
-    cx auto "task"        # YOLO-level automation
-    cx net "task"         # YOLO-level automation/network
-    cx semi "task"        # safer escape hatch
-    cx plan "task"        # read-only planning
-    cx handoff            # copy context for ChatGPT
-    cx apply              # apply copied ChatGPT plan
-    cx doctor             # validate repo
+    cxf "task"             # fast YOLO daily driver
+    cx "task"              # YOLO default
+    cx yolo "task"         # YOLO explicit
+    cx auto "task"         # YOLO-level automation
+    cx net "task"          # YOLO-level automation/network
+    cx semi "task"         # safer escape hatch
+    cx plan "task"         # read-only planning
+    cx handoff             # copy compact context for ChatGPT
+    cx apply               # apply copied ChatGPT plan
+    cx doctor              # adaptive validation
+    cx index               # refresh repo index
 
-## Each time
+## Each run
 
-1. Check repo state with `git status --short --branch`.
+1. Check `git status --short --branch`.
 2. Read `AGENTS.md`.
-3. Use `rg` and targeted file reads instead of full-repo dumps.
-4. Make the smallest useful diff.
-5. Run `.ai/doctor.sh`.
-6. Report changed files, validation result, diff summary, rollback command, and remaining risks.
+3. Read `.ai/repo-index.md` if present.
+4. Use `rg` and targeted file reads instead of dumping the repo.
+5. Make the smallest useful diff.
+6. Run `.ai/doctor.sh`.
+7. Report changed files, validation result, diff summary, rollback command, and remaining risks.
 
-## Do not waste tokens
+## Token-saving rules
 
-- Do not read `.ai/runs`, `.ai/reports`, `node_modules`, `.venv`, `.pnpm-store`, build output, or caches unless asked.
+- Do not read `.ai/runs`, `.ai/reports`, `node_modules`, `.venv`, `.pnpm-store`, `dist`, `build`, output, cache, or generated folders unless asked.
 - Do not re-read unchanged files repeatedly.
-- Put durable rules in `AGENTS.md`; put longer reminders here.
+- Do not paste long logs when a short failure summary is enough.
+- Put durable repo behavior in `AGENTS.md`.
+- Put long operational notes here.
