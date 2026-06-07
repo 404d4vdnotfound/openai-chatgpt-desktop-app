@@ -1,11 +1,7 @@
-review_model = "gpt-5.5"
-project_doc_max_bytes = 65536
-project_doc_fallback_filenames = ["CLAUDE.md", ".agents.md"]
-project_root_markers = [".git", "package.json", "pyproject.toml", "Cargo.toml", "go.mod"]
+# Repo-local Codex config.
+# David wants YOLO/full automation by default.
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
 
-[features]
-hooks = true
-fast_mode = true
-multi_agent = true
-shell_snapshot = true
-unified_exec = true
+[sandbox_workspace_write]
+network_access = true

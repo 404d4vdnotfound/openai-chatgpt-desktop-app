@@ -47,3 +47,8 @@ spec/.hash
 ts-gen
 
 
+.ai/runs/
+.ai/reports/
+.ai/context-latest.md
+.ai/approved-plan.md
+.ai/ai-state-*.md
