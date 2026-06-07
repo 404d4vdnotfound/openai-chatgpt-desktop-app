@@ -1,6 +1,6 @@
 # Repo Index
 
-Generated: Sun Jun  7 08:37:51 MDT 2026
+Generated: Sun Jun  7 08:41:50 MDT 2026
 Repo: /Users/d4vd/Code/openai-chatgpt-desktop-app
 
 ## Git
@@ -8,13 +8,12 @@ Repo: /Users/d4vd/Code/openai-chatgpt-desktop-app
 ```text
 ## master...origin/master
  M AGENTS.md
- M docs/codex/README.md
 ?? .ai/repo-index.md.tmp
+167360f Add global Codex v3 control-plane shims
 b16f9b8 Add global Codex control-plane shims
 8ab25bc chore: add codex baseline
 986f569 docs: align agent guidance
 035d675 Add Codex managed baseline and review docs
-59bfe0e readme
 ```
 
 ## Detected project types
